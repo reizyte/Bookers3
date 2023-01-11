@@ -11,14 +11,22 @@
   </head>
 
   <body>
-    <header>
-      <% if user_signed_in? %>
-        <li><%= link_to "マイページ", user_path(current_user) %></li>
-        <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+    <header class="page-header wrapper">
+      <h1 class="heading">Bookers3!</h1>
+        <h1><imag class="logo" scr="app/assets/images/favicon.png"></h1>
+      <nav>
+        <ul class="main-nav">
+          <% if user_signed_in? %>
+        <li><%= link_to "マイページ", user_path(current_user), class: "edit-link" %></li>
+        <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "edit-link" %></li>
+        <li><%= link_to "Books", books_path, class:"edit-link" %></li>
       <% else %>
-        <li><%= link_to "新規登録", new_user_registration_path %></li>
-        <li><%= link_to "ログイン", new_user_session_path %></li>
+        <li><%= link_to "新規登録", new_user_registration_path, class: "edit-link" %></li>
+        <li><%= link_to "ログイン", new_user_session_path, class: "edit-link" %></li>
       <% end %>
+        </ul>
+      </nav>
+
     </header>
     <%= yield %>
   </body>
