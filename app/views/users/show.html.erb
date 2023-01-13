@@ -1,2 +1,20 @@
 <h1>ユーザー詳細</h1>
-<%= @user.name %>
+<section>
+  <%= @user.name %>
+  <%= @user.caption %>
+</section>
+
+<section>
+  <table border="1">
+    <tr>
+      <th>タイトル</th>
+      <th>感想</th>
+    </tr>
+    <tr>
+      <% @books.each do |book| %>
+      <td><%= book.title %></td>
+      <td><%= book.body %></td>
+      <% end %>
+    </tr>
+  </table>
+</section>
