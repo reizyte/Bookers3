@@ -1,7 +1,9 @@
 <h1>ユーザー詳細</h1>
 <section>
+  <%= image_tag @user.get_profile_image, size: "50x50" %>
   <%= @user.name %>
   <%= @user.caption %>
+  <%= link_to "編集する", edit_user_path(@user) %>
 </section>
 
 <section>

@@ -1,2 +1,10 @@
-<h1>Users#edit</h1>
-<p>Find me in app/views/users/edit.html.erb</p>
+<h1>会員編集</h1>
+<%= form_with model: @user do |f| %>
+<p>アイコン画像</p>
+<%= f.file_field :image, accept:"image/*" %>
+<p>お名前</p>
+<%= f.text_field :name %>
+<p>自己紹介</p>
+<%= f.text_area :caption %>
+<%= f.submit "保存する"%>
+<% end %>

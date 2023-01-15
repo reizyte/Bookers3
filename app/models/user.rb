@@ -6,4 +6,9 @@ class User < ApplicationRecord
 
   has_one_attached :profile_image
   has_many :books
+
+  def get_profile_image
+    (profile_image.attached?) ? profile_image: "no_image.png"
+
+  end
 end
