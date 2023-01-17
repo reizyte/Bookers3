@@ -26,8 +26,9 @@
   color: #432;
  }
 
- image {
-   max-width: 100%;
+ .big-bg {
+   background-image: linear-gradient(#c9ffbf, #ffafbd);
+   min-height: 100vh;
  }
 
 
@@ -38,7 +39,6 @@
 }
 
  .page-header {
-   background-color: #c3dcbe;
    display: flex;
    justify-content: space-between;
  }
@@ -62,3 +62,12 @@
     margin: 0 auto;
 }
 
+.home-content {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.home-content p {
+  font-size: 1.125rem;
+  margin: 10px 0 42px;
+}
