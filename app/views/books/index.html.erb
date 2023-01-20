@@ -1,10 +1,10 @@
 <h1>Book一覧</h1>
 <%= form_with model: @book do |f| %>
-<p>タイトル</p>
-<%= f.text_field :title %>
-<p>感想</p>
-<%= f.text_area :body %>
-<%= f.submit "投稿" %>
+  <p>タイトル</p>
+  <%= f.text_field :title %>
+  <p>感想</p>
+  <%= f.text_area :body %>
+  <%= f.submit "投稿" %>
 <% end %>
 
 <section>
