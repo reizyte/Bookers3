@@ -71,3 +71,25 @@
   font-size: 1.125rem;
   margin: 10px 0 42px;
 }
+
+.top-visual {
+  width: 100%;
+  height: 600px;
+  background-image: url("top.jpg");
+  background-size: cover;
+}
+
+.button {
+  font-size: 1.375rem;
+  background: #0bd;
+  color: #fff;
+  border-radius: 5px;
+  padding: 18px 32px;
+}
+
+.page-title {
+  font-size: 5rem;
+  font-family: 'philosopher', serif;
+  text-transform: uppercase;
+  font-weight: normal;
+}
