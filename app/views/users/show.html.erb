@@ -7,6 +7,18 @@
 </section>
 
 <section>
+  <%= form_with model: @book do |f| %>
+  <p>タイトル</p>
+  <%= f.text_field :title %>
+  <p>感想</p>
+  <%= f.text_area :body %>
+  <p>画像</p>
+  <%= f.file_field :image, accept:"image/*" %>
+  <%= f.submit "投稿" %>
+<% end %>
+</section>
+
+<section>
   <table border="1">
     <tr>
       <th>タイトル</th>
@@ -14,6 +26,7 @@
     </tr>
     <tr>
       <% @books.each do |book| %>
+      <%= image_tag book.get_image, size: "100x100" %>
       <td><%= book.title %></td>
       <td><%= book.body %></td>
       <% end %>
