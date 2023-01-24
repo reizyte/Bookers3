@@ -1,19 +1,13 @@
 <h1>Book一覧</h1>
 
 <section>
-  <table border="1">
-    <tr>
-      <th>タイトル</th>
-      <th>感想</th>
-    </tr>
-    <tr>
+      タイトル
+      感想
       <% @books.each do |book| %>
       <%= image_tag book.get_image, size: "100x100" %>
-      
-      <td><%= link_to book.title, book_path(book) %></td>
-      <td><%= book.body %></td>
-      <td><%= link_to "本の編集", edit_book_path(book) %></td>
+
+      <%= link_to book.title, book_path(book) %>
+      <%= book.body %>
+      <%= link_to "本の編集", edit_book_path(book) %>
       <% end %>
-    </tr>
-  </table>
 </section>
