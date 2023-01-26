@@ -1,12 +1,16 @@
-<h1>ユーザー詳細</h1>
-<section>
-  <%= image_tag @user.get_profile_image, size: "50x50" %>
-  <%= @user.name %>
-  <%= @user.caption %>
+<h1>会員ページ</h1>
+<div class="home-content">
+  <div class="user-show-visual">
+    <div class="user-show-visual-content">
+  <%= image_tag @user.get_profile_image, size: "150x150" %>
+  <p><%= @user.name %></p>
+  <p><%= @user.caption %></p>
   <%= link_to "編集する", edit_user_path(@user) %>
-</section>
+  </div>
+  </div>
+</div>
 
-<section>
+<div>
   <%= form_with model: @book do |f| %>
   <p>タイトル</p>
   <%= f.text_field :title %>
@@ -16,7 +20,7 @@
   <%= f.file_field :image, accept:"image/*" %>
   <%= f.submit "投稿" %>
 <% end %>
-</section>
+</div>
 
 <section>
   <table border="1">

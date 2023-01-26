@@ -64,7 +64,7 @@
 
 .home-content {
   text-align: center;
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 .home-content p {
@@ -77,14 +77,14 @@
   height: 600px;
   background-image: url("top.jpg");
   background-size: cover;
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 .top-visual-content {
   width: 100%;
-  height: 400px;
+  height: 500px;
   background-color: rgba(255,255,255,0.5);
-  padding-top: 60px;
+  padding-top: 90px;
 }
 
 .button {
@@ -118,3 +118,17 @@
   margin-bottom: 50px;
 }
 
+.user-show-visual {
+  width: 100%;
+  height: 600px;
+  background-image: url("sky.jpg");
+  background-size: cover;
+  
+}
+
+.user-show-visual-content {
+   width: 100%;
+  height: 100%;
+  background-color: rgba(255,255,255,0.4);
+  padding-top: 100px;
+}
