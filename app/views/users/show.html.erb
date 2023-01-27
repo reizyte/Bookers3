@@ -8,18 +8,20 @@
   <%= link_to "編集する", edit_user_path(@user) %>
   </div>
   </div>
-</div>
+
 
 <div>
+  <p>投稿する</p>
   <%= form_with model: @book do |f| %>
   <p>タイトル</p>
-  <%= f.text_field :title %>
+  <%= f.text_field :title, class: "form-text" %>
   <p>感想</p>
-  <%= f.text_area :body %>
+  <%= f.text_area :body, class: "form-area" %>
   <p>画像</p>
   <%= f.file_field :image, accept:"image/*" %>
   <%= f.submit "投稿" %>
 <% end %>
+</div>
 </div>
 
 <section>
