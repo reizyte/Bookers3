@@ -148,3 +148,11 @@
   height: 4rem;
   width: 25%;
 }
+
+.user-visual {
+  width: 100%;
+  height: 600px;
+  background-image: url("flower.jpg");
+  background-size: cover;
+  padding-top: 60px;
+}

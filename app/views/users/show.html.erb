@@ -5,12 +5,14 @@
   <%= image_tag @user.get_profile_image, size: "150x150" %>
   <p><%= @user.name %></p>
   <p><%= @user.caption %></p>
+  
+  <% if @user == current_user %>
   <%= link_to "編集する", edit_user_path(@user) %>
+  <% end %>
   </div>
   </div>
 
-
-<div>
+<% if @user == current_user %>
   <p>投稿する</p>
   <%= form_with model: @book do |f| %>
   <p>タイトル</p>
@@ -21,18 +23,19 @@
   <%= f.file_field :image, accept:"image/*" %>
   <%= f.submit "投稿" %>
 <% end %>
-</div>
+<% end %>
 </div>
 
+<div class="home-content">投稿したもの</div>
 <div class="wrapper grid">
-
      <% @books.each do |book| %>
      <div class="item">
       <%= image_tag book.get_image, size: "300x300" %>
       <p><%= link_to book.title, book_path(book) %></p>
       <p><%= book.body %></p>
+      <% if @user == current_user %>
       <p><%= link_to "編集", edit_book_path(book) %></p>
+      <% end %>
       </div>
       <% end %>
-  
 </div>
