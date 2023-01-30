@@ -8,6 +8,7 @@
   </div>
 </div>
 
+<div class="home-content">投稿一覧</div>
 <div class="wrapper grid">
 
      <% @books.each do |book| %>
@@ -15,10 +16,9 @@
       <%= image_tag book.get_image, size: "300x300" %>
       <p><%= link_to book.title, book_path(book) %></p>
       <p><%= book.body %></p>
-      <p><%= link_to "編集", edit_book_path(book) %></p>
       </div>
       <% end %>
-  
+
 </div>
 
 
