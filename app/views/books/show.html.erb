@@ -1,11 +1,14 @@
-<h1>book詳細</h1>
-<p>タイトル</p>
-<%= @book.title %>
-<p>感想</p>
-<%= @book.body %>
+<div class="home-content">
+  <h2 class="pagi-title">book</h2>
+  <p>タイトル</p>
+  <%= @book.title %>
+  <p>感想</p>
+  <%= @book.body %>
 
 
-<% if @book.user == current_user %>
-<%= link_to "編集する", edit_book_path(@book) %>
-<%= link_to "削除する", book_path(@book), method: :delete %>
-<% end %>
+  <% if @book.user == current_user %>
+    <%= link_to "編集する", edit_book_path(@book) %>
+    <%= link_to "削除する", book_path(@book), method: :delete %>
+  <% end %>
+</div>
+
