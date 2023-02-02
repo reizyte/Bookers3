@@ -1,9 +1,12 @@
-<h1>book編集</h1>
-<%= form_with model: @book do |f| %>
-  <p>タイトル</p>
-  <%= f.text_field :title %><br>
-  <p>感想</p>
-  <%= f.text_area :body %>
-  <%= f.file_field :image, accept:"image/*" %>
+<div class="home-content">
+  <h2 class="page-title">book編集</h2>
+  <%= form_with model: @book do |f| %>
+    <p>タイトル</p>
+    <%= f.text_field :title %><br>
+    <p>感想</p>
+    <%= f.text_area :body %>
+    <%= f.file_field :image, accept:"image/*" %>
   <%= f.submit "変更を保存" %>
 <% end %>
+</div>
+
