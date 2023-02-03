@@ -10,15 +10,13 @@
 
 <div class="home-content">投稿一覧</div>
 <div class="wrapper grid">
-
-     <% @books.each do |book| %>
-     <div class="item">
+  <% @books.each do |book| %>
+    <div class="item">
       <%= image_tag book.get_image, size: "300x300" %>
       <p><%= link_to book.title, book_path(book) %></p>
       <p><%= book.body %></p>
-      </div>
-      <% end %>
-
+    </div>
+  <% end %>
 </div>
 
 
