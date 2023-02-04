@@ -5,7 +5,6 @@
   <p>感想</p>
   <%= @book.body %>
 
-
   <% if @book.user == current_user %>
     <%= link_to "編集する", edit_book_path(@book) %>
     <%= link_to "削除する", book_path(@book), method: :delete %>
