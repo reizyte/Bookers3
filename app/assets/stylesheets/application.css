@@ -160,3 +160,13 @@
 .user-content {
   margin: 10px;
 }
+
+.big-box {
+  margin: 0 auto;
+  height: 200px;
+  weight: 20px
+}
+
+.box1 {
+  background-color: blue;
+}
